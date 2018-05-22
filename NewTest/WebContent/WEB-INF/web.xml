@@ -9,4 +9,17 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+<servlet-name>jerseyServlet</servlet-name>
+<servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer </servlet-class>
+<init-param>
+<param-name>com.sun.jersey.config.property.packages</param-name>
+<param-value>restful.webcontent</param-value>
+</init-param>
+<load-on-startup>1</load-on-startup>
+</servlet>
+<servlet-mapping>
+<servlet-name>jerseyServlet</servlet-name>
+<url-pattern>/backend/*</url-pattern>
+</servlet-mapping>
 </web-app>
